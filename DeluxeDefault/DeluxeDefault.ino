@@ -14,7 +14,7 @@
 // pin 4 - Data/Command select (D/C)
 // pin 8 - LCD chip select (CS)
 // pin 7 - LCD reset (RST)
-Adafruit_PCD8544 display = Adafruit_PCD8544(4, 8, 7);//updated MeArm Pins
+Adafruit_PCD8544 display = Adafruit_PCD8544( 4, 8, 7);//updated MeArm Pins
 // Note with hardware SPI MISO and SS pins aren't used but will still be read
 // and written to during SPI transfer.  Be careful sharing these pins!
 
@@ -23,7 +23,7 @@ Adafruit_PCD8544 display = Adafruit_PCD8544(4, 8, 7);//updated MeArm Pins
 
 const int SERVOS = 4;
 const int ACC = 10; // the accurancy of the potentiometer value before idle starts counting
-const int CON = 50; // the value of the contrast for the LCD Screen Min is 0 and Max 120 if you can't see anything try increasing, if you see a black box try decreasing.
+const int CON = 60; // the value of the contrast for the LCD Screen Min is 0 and Max 120 if you can't see anything try increasing, if you see a black box try decreasing.
 int PIN[SERVOS], value[SERVOS], idle[SERVOS], currentAngle[SERVOS], MIN[SERVOS], MAX[SERVOS], INITANGLE[SERVOS], previousAngle[SERVOS],ANA[SERVOS];
 Servo myservo[SERVOS];
 //int modePin = 3;
@@ -232,17 +232,13 @@ void loop() {
 
 /*********************************************************************
 This is an example sketch for our Monochrome Nokia 5110 LCD Displays
-
   Pick one up today in the adafruit shop!
   ------> http://www.adafruit.com/products/338
-
 These displays use SPI to communicate, 4 or 5 pins are required to
 interface
-
 Adafruit invests time and resources providing this open source code,
 please support Adafruit and open-source hardware by purchasing
 products from Adafruit!
-
 Written by Limor Fried/Ladyada  for Adafruit Industries.
 BSD license, check license.txt for more information
 All text above, and the splash screen must be included in any redistribution
